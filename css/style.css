@@ -871,3 +871,167 @@ fieldset {
     background-color: #fff;
     padding:50px;
 }
+
+
+
+
+
+
+/* promotion section
+==================================================*/
+
+
+#promotion {
+    padding: 100px 0;
+    background-color: #f3f3f3;
+}
+
+.promotion-section {
+}
+
+.promotion-tab {
+    min-height:400px;
+}
+
+.promotion-img-div img {
+    margin: 0 auto;
+}
+
+#promotion input[type="checkbox"] {
+    display: none;
+}
+
+.label-container {
+    padding:10px 0px;
+    position: relative;
+}
+
+.promotion-form i {
+    margin-left: 10px;
+    color:#9F9EA1;
+    cursor: pointer;
+}
+
+.promotion-submit {
+    overflow:auto;
+    text-align: center;
+}
+
+.promotion-submit button {
+    margin:10px 0px;
+}
+
+.promotion-contact input  {
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #eee;
+    border-radius: 10%;
+}
+
+.check-container {
+    padding-left: 65px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.check-container.check-disabled {
+    cursor: not-allowed;
+}
+
+ 
+
+
+.check-container:hover .checkmark {
+    background-color: #ccc;
+}
+
+.check-container input:checked ~ .checkmark {
+    background-color:#2D2A32;
+}
+
+.check-container input:checked ~ .checkmark.disabled {
+    background-color: #666469;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.check-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.check-container .checkmark:after {
+    left: 13px;
+    top: 7px;
+    width: 12px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.promo-info {
+    font-weight: 700;
+    cursor: help;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+.promo-info .promo-tip {
+    visibility: hidden;
+    width: 240px;
+    background-color: rgba(31, 31, 31, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 4px;
+    font-weight: normal;
+
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 130%; 
+}
+
+.promo-info:hover .promo-tip {
+    visibility: visible;
+}
+
+.promo-info .promo-tip::after {
+    content: " ";
+    position: absolute;
+    top: 40%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(31, 31, 31, 0.9) transparent transparent;
+}
+
+#promo-form input, #promo-form textarea {
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+
+
