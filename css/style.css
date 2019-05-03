@@ -332,6 +332,10 @@ a.active {
     }
 }
 
+.txt-type > .txt {
+    border-right: 0.2rem solid #d5d5d5;
+}
+
 
 /* about section
 ==================================================*/
