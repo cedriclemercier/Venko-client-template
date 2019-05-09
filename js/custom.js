@@ -234,3 +234,69 @@ function init() {
     
     new TypeWriter(txtElement, words, wait);
 }
+
+
+$(function () {
+        $('#contact-form').validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                email: {
+                    required: true
+                },
+                phone: {
+                    required: false
+                },
+                message: {
+                    required: true
+                }
+
+            },
+            messages: {
+                name: {
+                    required: "This field is required",
+                    minlength: "your name must consist of at least 2 characters"
+                },
+                email: {
+                    required: "This field is required"
+                },
+                message: {
+                    required: "This field is required"
+                }
+            },
+            submitHandler: function (form) {
+                $(form).ajaxSubmit({
+                    type: "POST",
+                    data: $(form).serialize(),
+                    url: "process.php",
+                    success: function () {
+                        
+                        $('#contact-form :input').attr('disabled', 'disabled');
+                        $('#contact-form').fadeTo("slow", 1, function () {
+                            $(this).find(':input').attr('disabled', 'disabled');
+                           /* $(this).find('label').css('cursor', 'default');
+                            $('#success').fadeIn();*/
+                        });
+                         $('#contact-form').fadeOut();
+                        $('.success-message').delay(1500).fadeIn();
+                        /*
+                        document.getElementById('contact-form').style.display = "none";
+                        
+                        $('#contact-form').addClass('hide');
+                        $('.success-message').addClass('show');
+                        */
+                    },
+                    error: function () {
+                        $('#contact-form').fadeTo("slow", 1, function () {
+                            $('#error').fadeIn();
+                        });
+                    }
+                    
+                    
+                });
+            }
+        });
+
+    });

@@ -7,17 +7,17 @@
 
 /* Table of Content
 ==================================================
-	- Google fonts & font family -
-	- typography -
-	- General -
-    - Preloader -
-	- Header -
-    - home section -
-    - About section -
-    - experience section -
-    - projects section -
-    - Contact section -
-    - Responsive media queries -
+- Google fonts & font family -
+- typography -
+- General -
+- Preloader -
+- Header -
+- home section -
+- About section -
+- experience section -
+- projects section -
+- Contact section -
+- Responsive media queries -
 */
 
 
@@ -881,13 +881,32 @@ fieldset {
 
 
 
+
+
 /* promotion section
 ==================================================*/
+#contact-form select {
+    height: 50px;
+    margin-bottom: 10px;
+}
+.success-message {
+    color: #333333;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    border: 2px solid #d5d5d5;
+    margin-top: 10px;
+    display: none;
+    background-color:#fff;
 
+
+    -webkit-transition-delay: 1s; /* Safari */
+    transition: opacity 750ms ease-in-out 1s;
+}
 
 #promotion {
     padding: 100px 0;
-    background-color: #f3f3f3;
 }
 
 .promotion-section {
@@ -956,7 +975,7 @@ fieldset {
     cursor: not-allowed;
 }
 
- 
+
 
 
 .check-container:hover .checkmark {
